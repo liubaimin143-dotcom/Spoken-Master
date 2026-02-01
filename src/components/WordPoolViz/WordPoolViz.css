@@ -1,0 +1,142 @@
+/* 单词池可视化组件样式 */
+
+.word-pool-viz {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 16px;
+    padding: 1.25rem;
+    border: 1px solid rgba(93, 122, 100, 0.1);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+}
+
+.word-pool-viz__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.word-pool-viz__title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #2d3a2e;
+    margin: 0;
+}
+
+.word-pool-viz__total {
+    font-size: 0.85rem;
+    color: #6b7c6e;
+}
+
+/* 进度条 */
+.word-pool-viz__bar-container {
+    margin-bottom: 1rem;
+}
+
+.word-pool-viz__bar {
+    display: flex;
+    height: 10px;
+    border-radius: 5px;
+    overflow: hidden;
+    background: rgba(0, 0, 0, 0.05);
+}
+
+.word-pool-viz__segment {
+    height: 100%;
+    transition: width 0.4s ease;
+}
+
+/* 图例 */
+.word-pool-viz__legend {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.word-pool-viz__legend-item {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.8rem;
+}
+
+.word-pool-viz__legend-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.word-pool-viz__legend-label {
+    color: #6b7c6e;
+    flex: 1;
+}
+
+.word-pool-viz__legend-count {
+    font-weight: 600;
+    color: #2d3a2e;
+}
+
+/* 当前进度 */
+.word-pool-viz__progress {
+    padding-top: 1rem;
+    border-top: 1px solid rgba(93, 122, 100, 0.1);
+    margin-bottom: 1rem;
+}
+
+.word-pool-viz__progress-header {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.8rem;
+    color: #6b7c6e;
+    margin-bottom: 0.5rem;
+}
+
+.word-pool-viz__progress-bar {
+    height: 6px;
+    border-radius: 3px;
+    background: rgba(93, 122, 100, 0.1);
+    overflow: hidden;
+}
+
+.word-pool-viz__progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #5d7a64 0%, #3b82f6 100%);
+    border-radius: 3px;
+    transition: width 0.3s ease;
+}
+
+.word-pool-viz__progress-text {
+    text-align: center;
+    font-size: 0.8rem;
+    color: #5d7a64;
+    font-weight: 600;
+    margin-top: 0.4rem;
+}
+
+/* 额外统计 */
+.word-pool-viz__stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(93, 122, 100, 0.1);
+}
+
+.word-pool-viz__stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.2rem;
+}
+
+.word-pool-viz__stat-label {
+    font-size: 0.7rem;
+    color: #8a9a8c;
+}
+
+.word-pool-viz__stat-value {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #5d7a64;
+}

@@ -1,0 +1,1 @@
+export { WordTabs } from './WordTabs';

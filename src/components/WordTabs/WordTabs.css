@@ -1,0 +1,68 @@
+/* Word Tabs 样式 */
+
+.word-tabs {
+    display: flex;
+    gap: 0.5rem;
+    padding: 0.5rem;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 16px;
+    border: 1px solid rgba(93, 122, 100, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+.word-tabs__tab {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1rem;
+    border-radius: 12px;
+    border: none;
+    background: transparent;
+    color: #6b7c6e;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.word-tabs__tab:hover {
+    background: rgba(93, 122, 100, 0.1);
+    color: #5d7a64;
+}
+
+.word-tabs__tab--active {
+    background: linear-gradient(135deg, #5d7a64 0%, #4a6350 100%);
+    color: white;
+    box-shadow: 0 4px 12px rgba(93, 122, 100, 0.3);
+}
+
+.word-tabs__tab--active:hover {
+    background: linear-gradient(135deg, #5d7a64 0%, #4a6350 100%);
+    color: white;
+}
+
+.word-tabs__label {
+    font-weight: 500;
+}
+
+.word-tabs__count {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 1.5rem;
+    height: 1.5rem;
+    padding: 0 0.4rem;
+    border-radius: 8px;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.word-tabs__tab:not(.word-tabs__tab--active) .word-tabs__count {
+    background: rgba(93, 122, 100, 0.1);
+    color: #5d7a64;
+}
+
+.word-tabs__tab--active .word-tabs__count {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+}

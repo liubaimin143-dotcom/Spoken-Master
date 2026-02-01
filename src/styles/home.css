@@ -1,0 +1,256 @@
+/* ==================== */
+/* 首页专用样式 */
+/* ==================== */
+
+/* 今日学习入口 */
+.today-learning {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    border-radius: 24px;
+    padding: 32px;
+    margin-bottom: 40px;
+}
+
+.learning-stages {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    margin-bottom: 28px;
+    flex-wrap: wrap;
+}
+
+.stage-card {
+    background: rgba(250, 248, 245, 0.9);
+    border: 2px solid transparent;
+    border-radius: 16px;
+    padding: 20px;
+    min-width: 200px;
+    transition: all 0.3s ease;
+}
+
+.stage-card.stage-active {
+    border-color: #5d7a64;
+    background: rgba(93, 122, 100, 0.08);
+}
+
+.stage-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+.stage-icon {
+    font-size: 32px;
+    margin-bottom: 12px;
+}
+
+.stage-info h3 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.stage-count {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 4px;
+}
+
+.stage-count strong {
+    color: #5d7a64;
+    font-size: 18px;
+}
+
+.stage-time {
+    font-size: 12px;
+    color: #999;
+}
+
+.stage-status {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 12px;
+    font-size: 12px;
+    color: #888;
+}
+
+.status-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #ccc;
+}
+
+.status-dot.active {
+    background: #5d7a64;
+    box-shadow: 0 0 8px rgba(93, 122, 100, 0.5);
+}
+
+.stage-arrow {
+    font-size: 24px;
+    color: #ccc;
+}
+
+/* 开始学习按钮 */
+.btn-start-learning {
+    display: block;
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto 24px;
+    padding: 16px 32px;
+    border-radius: 30px;
+    font-size: 18px;
+    font-weight: 600;
+    background: linear-gradient(135deg, #5d7a64 0%, #7a9b82 100%);
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(93, 122, 100, 0.3);
+}
+
+.btn-start-learning:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(93, 122, 100, 0.4);
+}
+
+/* 快捷设置 */
+.quick-settings {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    flex-wrap: wrap;
+}
+
+.setting-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    color: #666;
+}
+
+.setting-item select {
+    padding: 6px 12px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    background: white;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+/* 开关样式 */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 44px;
+    height: 24px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.3s;
+    border-radius: 24px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: 0.3s;
+    border-radius: 50%;
+}
+
+input:checked+.slider {
+    background-color: #5d7a64;
+}
+
+input:checked+.slider:before {
+    transform: translateX(20px);
+}
+
+/* 统计区域 */
+.stats-section {
+    margin-bottom: 40px;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.stat-card {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    border-radius: 16px;
+    padding: 24px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+.stat-icon {
+    font-size: 28px;
+    margin-bottom: 12px;
+}
+
+.stat-value {
+    font-size: 32px;
+    font-weight: 700;
+    color: #4a5d4f;
+    margin-bottom: 4px;
+}
+
+.stat-label {
+    font-size: 13px;
+    color: #888;
+}
+
+/* 模块区域 */
+.modules-section {
+    margin-bottom: 40px;
+}
+
+/* 响应式 */
+@media (max-width: 1024px) {
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .learning-stages {
+        flex-direction: column;
+    }
+
+    .stage-arrow {
+        transform: rotate(90deg);
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

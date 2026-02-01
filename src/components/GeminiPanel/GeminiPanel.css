@@ -1,0 +1,253 @@
+/* Gemini 智能面板样式 */
+
+.gemini-panel {
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.95) 0%, rgba(248, 250, 248, 0.95) 100%);
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid rgba(147, 51, 234, 0.15);
+    box-shadow:
+        0 4px 20px rgba(147, 51, 234, 0.08),
+        0 0 0 1px rgba(147, 51, 234, 0.05);
+}
+
+.gemini-panel__header {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem 1.25rem;
+    background: linear-gradient(90deg, rgba(147, 51, 234, 0.05) 0%, rgba(59, 130, 246, 0.05) 100%);
+    border-bottom: 1px solid rgba(147, 51, 234, 0.1);
+}
+
+.gemini-panel__icon {
+    font-size: 1.25rem;
+}
+
+.gemini-panel__title {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #2d3a2e;
+    margin: 0;
+    background: linear-gradient(90deg, #9333ea, #3b82f6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* 选项卡 */
+.gemini-panel__tabs {
+    display: flex;
+    padding: 0.5rem;
+    gap: 0.5rem;
+    background: rgba(0, 0, 0, 0.02);
+    border-bottom: 1px solid rgba(93, 122, 100, 0.08);
+}
+
+.gemini-panel__tab {
+    flex: 1;
+    padding: 0.5rem;
+    border: none;
+    background: transparent;
+    border-radius: 8px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: #6b7c6e;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.gemini-panel__tab:hover {
+    background: rgba(147, 51, 234, 0.05);
+    color: #9333ea;
+}
+
+.gemini-panel__tab--active {
+    background: white;
+    color: #9333ea;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* 内容区域 */
+.gemini-panel__content {
+    padding: 1rem 1.25rem;
+}
+
+.gemini-panel__loading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 2rem;
+    color: #6b7c6e;
+}
+
+.gemini-panel__spinner {
+    font-size: 2rem;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.gemini-panel__section {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* 指标 */
+.gemini-panel__metrics {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.75rem;
+}
+
+.gemini-panel__metric {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
+    padding: 0.75rem 0.5rem;
+    background: rgba(147, 51, 234, 0.05);
+    border-radius: 10px;
+}
+
+.gemini-panel__metric-label {
+    font-size: 0.7rem;
+    color: #8a9a8c;
+}
+
+.gemini-panel__metric-value {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #9333ea;
+}
+
+/* 警告 */
+.gemini-panel__alert {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+    padding: 0.75rem;
+    background: rgba(239, 68, 68, 0.05);
+    border: 1px solid rgba(239, 68, 68, 0.2);
+    border-radius: 10px;
+}
+
+.gemini-panel__alert-icon {
+    font-size: 1rem;
+}
+
+.gemini-panel__alert strong {
+    display: block;
+    font-size: 0.8rem;
+    color: #dc2626;
+    margin-bottom: 0.25rem;
+}
+
+.gemini-panel__alert p {
+    font-size: 0.75rem;
+    color: #6b7c6e;
+    margin: 0;
+}
+
+/* 建议 */
+.gemini-panel__suggestion {
+    padding: 0.75rem;
+    background: rgba(59, 130, 246, 0.05);
+    border: 1px solid rgba(59, 130, 246, 0.2);
+    border-radius: 10px;
+}
+
+.gemini-panel__suggestion strong {
+    display: block;
+    font-size: 0.8rem;
+    color: #2563eb;
+    margin-bottom: 0.25rem;
+}
+
+.gemini-panel__suggestion p {
+    font-size: 0.75rem;
+    color: #4b5563;
+    margin: 0;
+    line-height: 1.5;
+}
+
+/* 按钮 */
+.gemini-panel__refresh,
+.gemini-panel__generate {
+    width: 100%;
+    padding: 0.6rem;
+    border: 1px solid rgba(147, 51, 234, 0.3);
+    background: rgba(147, 51, 234, 0.05);
+    color: #9333ea;
+    border-radius: 10px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.gemini-panel__refresh:hover,
+.gemini-panel__generate:hover {
+    background: rgba(147, 51, 234, 0.1);
+    border-color: rgba(147, 51, 234, 0.5);
+}
+
+/* 空状态 */
+.gemini-panel__empty {
+    text-align: center;
+    padding: 1.5rem;
+}
+
+.gemini-panel__empty p {
+    color: #8a9a8c;
+    font-size: 0.85rem;
+    margin-bottom: 1rem;
+}
+
+/* 队列信息 */
+.gemini-panel__queue-info {
+    text-align: center;
+    padding: 0.75rem;
+    background: rgba(16, 185, 129, 0.05);
+    border-radius: 10px;
+}
+
+.gemini-panel__queue-count {
+    color: #6b7c6e;
+    font-size: 0.85rem;
+    margin: 0;
+}
+
+.gemini-panel__queue-count strong {
+    color: #10b981;
+    font-size: 1.1rem;
+}
+
+.gemini-panel__reason {
+    padding: 0.75rem;
+    background: rgba(93, 122, 100, 0.05);
+    border-radius: 10px;
+}
+
+.gemini-panel__reason strong {
+    display: block;
+    font-size: 0.8rem;
+    color: #5d7a64;
+    margin-bottom: 0.25rem;
+}
+
+.gemini-panel__reason p {
+    font-size: 0.75rem;
+    color: #6b7c6e;
+    margin: 0;
+    line-height: 1.5;
+}

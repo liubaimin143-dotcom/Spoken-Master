@@ -1,0 +1,1 @@
+export { WordPoolViz } from './WordPoolViz';
