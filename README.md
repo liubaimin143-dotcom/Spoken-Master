@@ -66,7 +66,7 @@ source .venv/bin/activate
 pip install fastapi uvicorn sqlalchemy psycopg2-binary transformers torch torchaudio openai-whisper
 
 # Initialize Database
-# Ensure PostgreSQL is running and credentials in Model/database.py matched (default: postgres/liu48694062@localhost:5432/spoken_master)
+# Ensure PostgreSQL is running and credentials in Model/database.py matched (default: postgres/@localhost:5432/spoken_master)
 python Model/database.py
 ```
 
